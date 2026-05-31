@@ -1,2 +1,21 @@
-# WatchHub-Movie-App
-Movie search application built with HTML, CSS and JavaScript using movie API integration.
+# WatchHub Movie App
+
+A movie search application that allows users to discover movies, view ratings, and explore movie details.
+
+## Features
+
+- Movie search
+- Dynamic movie cards
+- Rating system
+- Responsive design
+- Interactive UI
+
+## Technologies
+
+- HTML5
+- CSS3
+- JavaScript
+
+## Author
+
+Waasay Ahmad
