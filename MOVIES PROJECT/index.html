@@ -1,0 +1,26 @@
+<!DOCTYPE html> <!-- Declares the document type as HTML5 -->
+<html lang="en"> <!-- Sets the language of the document to English -->
+<head> <!-- Contains meta-information about the HTML document -->
+ <meta charset="UTF-8" /> <!-- Specifies the character encoding for the document -->
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- Configures the viewport for responsive design -->
+ <link rel="stylesheet" href="CODE3.css" /> <!-- Links to an external stylesheet named "style.css" -->
+ <title>Movie App</title> <!-- Sets the title that appears in the browser tab or window title bar -->
+</head> <!-- Closes the head section -->
+<body> <!-- Contains the visible page content -->
+ <header> <!-- Represents introductory content, typically containing navigation and branding -->
+ <div class="logo"> <!-- Container for the logo -->
+ <a href="#" onclick="location.reload(); return false;"><h1>Watchhub</h1></a> <!-- Logo text that reloads the page when clicked -->
+ </div> <!-- Closes the logo div -->
+
+ <form id="form"> <!-- Form element for search functionality -->
+ <input type="text" id="search" class="search" placeholder="Search" /> <!-- Text input field for searching movies -->
+ </form> <!-- Closes the form -->
+
+ <button id="home-button" class="home-button" style="display: none;">Back to Home</button>
+  <!-- Button to return to the home view, initially hidden -->
+ </header> <!-- Closes the header -->
+ <main id="main"></main> <!-- Main content area where movie cards will be displayed -->
+
+ <script src="CODE3.js"></script> <!-- Links to an external JavaScript file named "script.js" -->
+</body> <!-- Closes the body section -->
+</html> <!-- Closes the HTML document -->

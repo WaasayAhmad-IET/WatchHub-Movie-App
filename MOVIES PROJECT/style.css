@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap'); /* Imports the Poppins font from Google Fonts */
+
+:root { /* Defines CSS variables for common colors */
+ --primary-color: #312c2c; /* Sets the primary color variable */
+ --secondary-color: #581010; /* Sets the secondary color variable */
+}
+* { /* Applies box-sizing to all elements */
+ box-sizing: border-box; /* Ensures padding and border are included in the element's total width and height */
+}
+
+body { /* Styles for the body element */
+ background-color: var(--primary-color); /* Sets the background color using the primary color variable */
+ font-family: 'Poppins', sans-serif; /* Sets the font family to Poppins, with a fallback to sans-serif */
+ margin: 0; /* Removes default body margin */
+}
+
+header { /* Styles for the header element */
+ position: relative; /* Required for absolute logo positioning */
+ padding: 1rem; /* Adds padding around the header content */
+ display: flex; /* Enables flexbox layout for the header's children */
+ justify-content: center; /* Centers items horizontally within the header */
+ align-items: center; /* Centers items vertically within the header */
+ background-color: var(--secondary-color); /* Sets the background color using the secondary color variable */
+}
+.logo { /* Styles for the logo */
+ position: absolute; /* Positions the logo absolutely within the header */
+ top: 1rem; /* Aligns the logo 1rem from the top of the header */
+ left: 1rem; /* Aligns the logo 1rem from the left of the header */
+ color: #fff; /* Sets the logo text color to white */
+ font-size: 1.5rem; /* Sets the font size of the logo */
+ font-weight: bold; /* Makes the logo text bold */
+}
+
+.logo a { /* Styles for the anchor tag inside the logo */
+ color: #fff; /* Sets the link color to white */
+ text-decoratioN:none /* Removes the underline from the link */
+}
+
+.search { /* Styles for the search input field */
+ background-color: transparent; /* Sets the background color to transparent */
+ border: 2px solid var(--primary-color); /* Adds a 2px solid border using the primary color */
+ border-radius: 50px; /* Applies a large border-radius for a pill shape */
+ font-family: inherit; /* Inherits the font family from its parent */
+ font-size: 1rem; /* Sets the font size of the input text */
+ padding: 0.5rem 1rem; /* Adds padding inside the search input */
+ color: #fff; /* Sets the text color to white */
+ margin-left: 6rem; /* Adds left margin to accommodate the logo */
+}
+.search::placeholder { /* Styles for the placeholder text in the search input */
+ color: #7378c5; /* Sets the color of the placeholder text */
+}
+
+.search:focus { /* Styles for the search input when it is focused */
+ outline: none; /* Removes the default outline on focus */
+ background-color: var(--primary-color); /* Changes the background color to the primary color on focus */
+}
+
+.home-button { /* Styles for the home button */
+ background-color: var(--primary-color); /* Sets the background color using the primary color */
+ color: #fff; /* Sets the text color to white */
+ border: 2px solid var(--primary-color); /* Adds a 2px solid border using the primary color */
+ border-radius: 50px; /* Applies a large border-radius for a pill shape */
+ font-family: inherit; /* Inherits the font family from its parent */
+ font-size: 1rem; /* Sets the font size of the button text */
+ padding: 0.5rem 1rem; /* Adds padding inside the button */
+ cursor: pointer; /* Changes the cursor to a pointer on hover */
+ margin-left: 1rem; /* Adds left margin to separate it from the search bar */
+}
+
+.home-button:hover { /* Styles for the home button on hover */
+ background-color: #4a4545; /* Changes the background color on hover */
+}
+
+main { /* Styles for the main content area */
+ display: flex; /* Enables flexbox layout for the main content's children */
+ flex-wrap: wrap; /* Allows flex items to wrap to the next line */
+ justify-content: center; /* Centers flex items horizontally */
+}
+
+.movie { /* Styles for individual movie containers */
+ width: 300px; /* Sets a fixed width for each movie container */
+ margin: 1rem; /* Adds margin around each movie container */
+ background-color: var(--secondary-color); /* Sets the background color using the secondary color */
+ box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2); /* Adds a subtle box shadow */
+ position: relative; /* Sets position to relative for absolute positioning of the overview */
+ overflow: hidden; /* Hides content that overflows the movie container */
+ border-radius: 3px; /* Applies a slight border-radius */
+}
+
+.movie img { /* Styles for images within movie containers */
+ width: 100%; /* Makes the image fill the width of its parent container */
+}
+
+.movie-info { /* Styles for the movie information section */
+ color: #eee; /* Sets the text color to a light gray */
+ display: flex; /* Enables flexbox layout for movie info elements */
+ align-items: center; /* Centers items vertically within movie info */
+ justify-content: space-between; /* Distributes space evenly between items */
+ gap: 0.2rem; /* Adds a small gap between flex items */
+ padding: 0.5rem 1rem 1rem; /* Adds padding around the movie info */
+ letter-spacing: 0.5px; /* Adds slight letter spacing */
+}
+
+.movie-info h3 { /* Styles for the movie title */
+ margin-top: 0; /* Removes default top margin for the heading */
+}
+
+.movie-info span { /* Styles for the rating span */
+ background-color: var(--primary-color); /* Sets the background color using the primary color */
+ padding: 0.25rem 0.5rem; /* Adds padding inside the span */
+ border-radius: 3px; /* Applies a slight border-radius */
+ font-weight: bold; /* Makes the text bold */
+}
+
+.movie-info span.green { /* Styles for green rating (good) */
+ color: lightgreen; /* Sets the text color to light green */
+}
+
+.movie-info span.orange { /* Styles for orange rating (average) */
+ color: orange; /* Sets the text color to orange */
+}
+
+.movie-info span.red { /* Styles for red rating (bad) */
+ color: red; /* Sets the text color to red */
+}
+
+.overview { /* Styles for the movie overview section */
+ background-color: #fff; /* Sets the background color to white */
+ padding: 2rem; /* Adds padding around the overview content */
+ position: absolute; /* Positions the overview absolutely within the movie container */
+ left: 0; /* Aligns the overview to the left of the movie container */
+ bottom: 0; /* Aligns the overview to the bottom of the movie container */
+ right: 0; /* Aligns the overview to the right of the movie container */
+ max-height: 100%; /* Sets maximum height to 100% of the parent */
+ transform: translateY(101%); /* Initially moves the overview out of view (downwards) */
+ overflow-y: auto; /* Adds a scrollbar if content overflows vertically */
+ transition: transform 0.3s ease-in; /* Adds a smooth transition for the transform property */
+}
+
+main { /* Styles for the main content area (re-declared for margin-top) */
+ display: flex; /* Enables flexbox layout for the main content's children */
+ flex-wrap: wrap; /* Allows flex items to wrap to the next line */
+ justify-content: center; /* Centers flex items horizontally */
+ margin-top: 7rem; /* Pushes content below the fixed header */
+}
+
+/* Fixed selector */
+.movie:hover .overview { /* Styles for the overview when the movie container is hovered */
+ transform: translateY(0); /* Moves the overview into view (upwards) */
+}
